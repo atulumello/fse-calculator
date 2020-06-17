@@ -41,7 +41,7 @@ export default function Home() {
               <Row>
                 <Col xs="12" className="text-center mt-3">
                   <p className="text-white">Copyright &copy;{date} Greater Toronto Financial Holdings</p>
-                  <a className="text-white" href="#">Questions? Contact us on FSEconomy</a>
+                  <a className="text-white" href="https://www.fseconomy.net/atulumello" target="_blank" rel="noreferrer">Questions? Contact us on FSEconomy</a>
                 </Col>
                 
               </Row>
