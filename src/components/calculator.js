@@ -1,5 +1,5 @@
 import React from "react"
-import { FormGroup, Input, Label, Row , Col , Alert } from "reactstrap"
+import { Table , FormGroup, Input, Label, Row , Col , Alert } from "reactstrap"
 
 
 
@@ -7,18 +7,35 @@ import { FormGroup, Input, Label, Row , Col , Alert } from "reactstrap"
 
 export default function Calculator() {
 
-
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
     const [price, setPrice] = React.useState('')
     const [term, setTerm] = React.useState('')
     const [ownershipFee, setOf] = React.useState('')
     const [downPayment, setDp] = React.useState('')
 
-    let loan = price - downPayment
-    let totalOwnershipFees = ownershipFee * term
-    let loanTotal = loan + totalOwnershipFees
+    //Total Financed (Price - DownPayment + Total Ownership Fees + Interest)
+    //Monthly Payment
+    //Interest
 
-    let loanMonthly = loanTotal / term
+    var minDown = price * .20
+    var totalOwnershipFees = ownershipFee * term
+
+    var loan = price - downPayment
+    var loan = loan + totalOwnershipFees
+    
+
+    var interestCharge = loan * (term/100)
+    var totalLoan = loan + interestCharge
+    
+
+    var loanMonthly = totalLoan / term
+
+    if (isNaN(loanMonthly)) loanMonthly = 0
+
+    //THIS IS TREATING TERM LENGTH AS THE INTEREST. IE RATHER THAN 6 MONTHS ITS 8 MONTHS.
 
   return (
       <div>
@@ -37,18 +54,18 @@ export default function Calculator() {
                     </Col>
                     <Col xs="12" lg="6">
                         <FormGroup>
-                            <Label for="downPayment">Down Payment</Label>
+                            <Label for="downPayment">Down Payment <span style={{fontSize: '13px', marginLeft: '3px'}}>(Min. 20%)</span></Label>
                             <div className="input-group">
                             <div className="input-group-prepend">
                                 <span className="input-group-text">v$</span>
                             </div>
-                            <Input type="number" name="downPayment" id="DownPayment" onChange={event => setDp(event.target.value)}/>
+                            <Input type="number" name="downPayment" id="DownPayment" placeholder={numberWithCommas(minDown)} onChange={event => setDp(event.target.value)}/>
                             </div>
                         </FormGroup>
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs="12" lg="6">
+                    <Col xs="6" lg="6">
                         <FormGroup>
                             <Label for="ownershipFee">Ownership Fee</Label>
                             <div className="input-group">
@@ -59,23 +76,46 @@ export default function Calculator() {
                             </div>
                         </FormGroup>
                     </Col>
-                    <Col xs="12" lg="6">
+                    <Col xs="6" lg="6">
                         <FormGroup>
-                            <Label for="term">Term</Label>
+                            <Label for="term">Term <span style={{fontSize: '13px', marginLeft: '3px'}}>({term}%)</span></Label>
                             <Input type="select" name="term" id="term" onChange={event => setTerm(event.target.value)}>
                                 <option value="0">Select a Term</option>
-                                <option value="3">3 Months (3%)</option>
-                                <option value="4">4 Months (4%)</option>
-                                <option value="5">5 Months (5%)</option>
-                                <option value="6">6 Months (6%)</option>
+                                <option value="3">3 Months</option>
+                                <option value="4">4 Months</option>
+                                <option value="5">5 Months</option>
+                                <option value="6">6 Months</option>
                             </Input>
                         </FormGroup>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <Alert className="text-center" color="warning"><h6 className="d-inline">Loan Total:</h6><p className="d-inline ml-1">v${loanTotal}</p></Alert>
-                        <Alert className="text-center" color="warning"><h6 className="d-inline">Monthly Dues:</h6><p className="d-inline ml-1">v${loanMonthly}</p></Alert>
+
+                        <Table size="sm">
+                            <tbody>
+                                <tr>
+                                    <td><h6>Total Financed:</h6></td>
+                                    <td><p>v${numberWithCommas(totalLoan.toFixed(2))}</p></td>
+                                </tr>
+                                <tr>
+                                    <td><h6>Total Ownership Fees:</h6></td>
+                                    <td><p>v${numberWithCommas(totalOwnershipFees.toFixed(2))}</p></td>
+                                </tr>
+                                {/* <tr>
+                                    <td><h6>Monthly Payment:</h6></td>
+                                    <td><p>v${numberWithCommas(loanMonthly.toFixed(2))}</p></td>
+                                </tr> */}
+                            </tbody>
+                        </Table>
+
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="text-center">
+                        <Alert color="success">
+                            <h6 className="mb-1">{term} Monthly Payments of</h6>
+                            <h5>v${numberWithCommas(loanMonthly.toFixed(2))}</h5></Alert>
                     </Col>
                 </Row>
             </div>

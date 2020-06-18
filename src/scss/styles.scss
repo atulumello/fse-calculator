@@ -47,5 +47,16 @@ h1,h2,h3,h4,h5,h6 {
         margin: 0;
         font-size: 12px;
         letter-spacing: 0.4px;
+        line-height: 1;
+    }
+}
+
+.table td {
+    border-top: 0;
+    border-bottom: 1px dashed rgba(238,82,83,.5);
+    padding-top: 10px;
+
+    h6, p {
+        margin: 0;
     }
 }

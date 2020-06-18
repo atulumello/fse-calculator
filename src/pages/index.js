@@ -30,7 +30,7 @@ export default function Home() {
               <Row>
                 <Col className="text-center mb-1">
                    <h4 style={{textTransform: 'uppercase'}}>Calculate your loan</h4>
-                   <hr style={{maxWidth: '200px'}} />
+                   <hr style={{maxWidth: '200px', marginTop: '10px', marginBottom: '10px'}} />
                 </Col>
               </Row>
 
@@ -40,7 +40,7 @@ export default function Home() {
             <div id="foot-wrapper">
               <Row>
                 <Col xs="12" className="text-center mt-3">
-                  <p className="text-white">Copyright &copy;{date} Greater Toronto Financial Holdings</p>
+                  <p className="text-white">&copy;{date} Greater Toronto Financial Holdings</p>
                   <a className="text-white" href="https://www.fseconomy.net/atulumello" target="_blank" rel="noreferrer">Questions? Contact us on FSEconomy</a>
                 </Col>
                 
