@@ -21,8 +21,8 @@ export default function Home() {
           <div id="center-wrapper">
             <div id="head-wrapper">
               <Row>
-                <Col className="text-center mb-3">
-                  <img className="box-shadow" src={Logo} alt="Logo" style={{width: '150px', backgroundColor: 'white', borderRadius: '2000px'}}/>
+                <Col className="text-center mb-2">
+                  <img className="box-shadow" src={Logo} alt="Logo" style={{width: '140px', backgroundColor: 'white', borderRadius: '50%'}}/>
                 </Col>
               </Row>
             </div>
@@ -39,7 +39,7 @@ export default function Home() {
             </div>
             <div id="foot-wrapper">
               <Row>
-                <Col xs="12" className="text-center mt-3">
+                <Col xs="12" className="text-center" style={{marginTop: '10px'}}>
                   <p className="text-white">&copy;{date} Greater Toronto Financial Holdings</p>
                   <a className="text-white" href="https://www.fseconomy.net/atulumello" target="_blank" rel="noreferrer">Questions? Contact us on FSEconomy</a>
                 </Col>

@@ -18,7 +18,7 @@ module.exports = {
     title: "Greater Toronto Financial",
     titleTemplate: "%s · FSE Loans",
     description:
-      "I describe the project",
+      "We help you get the FSE aircraft you want. Highly competative rates, Fantastic Customer Service",
     url: siteData.url, 
     image: "/images/icon.jpg", // Path to your image you placed in the 'static' folder
   },

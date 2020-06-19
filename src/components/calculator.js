@@ -19,6 +19,21 @@ export default function Calculator() {
     //Total Financed (Price - DownPayment + Total Ownership Fees + Interest)
     //Monthly Payment
     //Interest
+    
+
+    let newTerm
+    if ((term == 3)) {
+        newTerm = 3
+    }
+    if ((term == 4)) {
+        newTerm = 5
+    } if ((term == 5)) {
+        newTerm = 7
+    } if ((term == 6)) {
+        newTerm = 8
+    }
+        
+    
 
     var minDown = price * .20
     var totalOwnershipFees = ownershipFee * term
@@ -27,7 +42,7 @@ export default function Calculator() {
     var loan = loan + totalOwnershipFees
     
 
-    var interestCharge = loan * (term/100)
+    var interestCharge = loan * (newTerm/100)
     var totalLoan = loan + interestCharge
     
 
@@ -36,6 +51,7 @@ export default function Calculator() {
     if (isNaN(loanMonthly)) loanMonthly = 0
 
     //THIS IS TREATING TERM LENGTH AS THE INTEREST. IE RATHER THAN 6 MONTHS ITS 8 MONTHS.
+        
 
   return (
       <div>
@@ -78,7 +94,7 @@ export default function Calculator() {
                     </Col>
                     <Col xs="6" lg="6">
                         <FormGroup>
-                            <Label for="term">Term <span style={{fontSize: '13px', marginLeft: '3px'}}>({term}%)</span></Label>
+                            <Label for="term">Term <span style={{fontSize: '13px', marginLeft: '3px'}}>({newTerm}%)</span></Label>
                             <Input type="select" name="term" id="term" onChange={event => setTerm(event.target.value)}>
                                 <option value="0">Select a Term</option>
                                 <option value="3">3 Months</option>
@@ -102,10 +118,10 @@ export default function Calculator() {
                                     <td><h6>Total Ownership Fees:</h6></td>
                                     <td><p>v${numberWithCommas(totalOwnershipFees.toFixed(2))}</p></td>
                                 </tr>
-                                {/* <tr>
-                                    <td><h6>Monthly Payment:</h6></td>
-                                    <td><p>v${numberWithCommas(loanMonthly.toFixed(2))}</p></td>
-                                </tr> */}
+                                <tr>
+                                    <td><h6>Total Interest Charged:</h6></td>
+                                    <td><p>v${numberWithCommas(interestCharge.toFixed(2))}</p></td>
+                                </tr>
                             </tbody>
                         </Table>
 

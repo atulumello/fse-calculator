@@ -13,6 +13,7 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
     letter-spacing: 0.4px;
     margin: 0;
+    color: #233040;
 }
 
 #page-wrapper {
@@ -59,4 +60,8 @@ h1,h2,h3,h4,h5,h6 {
     h6, p {
         margin: 0;
     }
+}
+
+::placeholder {
+    color: rgba(238,82,83,.3) !important;
 }
