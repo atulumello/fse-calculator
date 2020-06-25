@@ -5,7 +5,7 @@
  */
 
 const siteData = {
-  url: "www.greatertorontofinancial.com", // No trailing slash allowed!
+  url: "https://www.greatertorontofinancial.com"// No trailing slash allowed!
 }
 
 module.exports = {
@@ -19,7 +19,8 @@ module.exports = {
     titleTemplate: "%s · FSE Loans",
     description:
       "We help you get the FSE aircraft you want. Highly competative rates, Fantastic Customer Service",
-    url: siteData.url, 
+    url: siteData.url,
+    siteUrl: siteData.url,
     image: "/images/icon.jpg", // Path to your image you placed in the 'static' folder
   },
 }

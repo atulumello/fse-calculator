@@ -8,7 +8,7 @@ import Calculator from '../components/calculator'
 import '../../node_modules/animate.css/animate.min.css'
 import '../scss/styles.scss'
 
-import Logo from '../images/logo_web_icon_resize.png'
+import Logo from '../../public/static/images/logo_web_icon_resize.png'
 
 let date = new Date().getFullYear();
 
@@ -19,10 +19,10 @@ export default function Home() {
  
         <div id="page-wrapper">
           <div id="center-wrapper">
-            <div id="head-wrapper">
+            <div id="head-wrapper" style={{position: 'relative', zIndex: '1000', top: '25px'}}>
               <Row>
                 <Col className="text-center mb-2">
-                  <img className="box-shadow" src={Logo} alt="Logo" style={{width: '140px', backgroundColor: 'white', borderRadius: '50%'}}/>
+                  <img src={Logo} alt="Logo" style={{width: '140px', backgroundColor: 'white', border: '10px solid #233040', borderRadius: '50%'}}/>
                 </Col>
               </Row>
             </div>

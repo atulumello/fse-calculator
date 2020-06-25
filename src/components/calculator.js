@@ -22,14 +22,23 @@ export default function Calculator() {
     
 
     let newTerm
+    let displayTerm
+    if ((term == 0 | isNaN)) {
+        displayTerm = ''
+        newTerm = 0
+    }
     if ((term == 3)) {
+        displayTerm = '(3%)'
         newTerm = 3
     }
     if ((term == 4)) {
+        displayTerm = '(5%)'
         newTerm = 5
     } if ((term == 5)) {
+        displayTerm = '(7%)'
         newTerm = 7
     } if ((term == 6)) {
+        displayTerm = '(8%)'
         newTerm = 8
     }
         
@@ -44,13 +53,13 @@ export default function Calculator() {
 
     var interestCharge = loan * (newTerm/100)
     var totalLoan = loan + interestCharge
-    
+
+    if (isNaN(totalLoan)) totalLoan = 0
+    if (isNaN(interestCharge)) interestCharge = 0
 
     var loanMonthly = totalLoan / term
 
     if (isNaN(loanMonthly)) loanMonthly = 0
-
-    //THIS IS TREATING TERM LENGTH AS THE INTEREST. IE RATHER THAN 6 MONTHS ITS 8 MONTHS.
         
 
   return (
@@ -94,9 +103,9 @@ export default function Calculator() {
                     </Col>
                     <Col xs="6" lg="6">
                         <FormGroup>
-                            <Label for="term">Term <span style={{fontSize: '13px', marginLeft: '3px'}}>({newTerm}%)</span></Label>
+                            <Label for="term">Term <span style={{fontSize: '13px', marginLeft: '3px'}}>{displayTerm}</span></Label>
                             <Input type="select" name="term" id="term" onChange={event => setTerm(event.target.value)}>
-                                <option value="0">Select a Term</option>
+                                <option value="0">Select Term</option>
                                 <option value="3">3 Months</option>
                                 <option value="4">4 Months</option>
                                 <option value="5">5 Months</option>
