@@ -140,6 +140,7 @@ export default function Calculator() {
                     <Col className="text-center">
                         <Alert color="success">
                             <h6 className="mb-1">{term} Monthly Payments of</h6>
+
                             <h5>v${numberWithCommas(loanMonthly.toFixed(2))}</h5></Alert>
                     </Col>
                 </Row>

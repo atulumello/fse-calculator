@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6 {
 .table td {
     border-top: 0;
     border-bottom: 1px dashed rgba(238,82,83,.5);
-    padding-top: 10px;
+    padding-top: 9px;
 
     h6, p {
         margin: 0;
@@ -64,4 +64,8 @@ h1,h2,h3,h4,h5,h6 {
 
 ::placeholder {
     color: rgba(238,82,83,.3) !important;
+}
+
+label {
+    margin-bottom: 0.1rem;
 }
