@@ -4,6 +4,8 @@
 # FSE Calculator
 A simple gatsby/react powered FSEconomy loan calculator.
 
+Here it is - but may be a version behind: https://www.greatertorontofinancial.com
+
 ### Plugins
 * reactstrap
 * Bootstrap
