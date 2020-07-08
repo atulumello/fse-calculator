@@ -10,7 +10,9 @@ import '../scss/styles.scss'
 
 import Logo from '../../public/static/images/logo_web_icon_resize.png'
 
+
 let date = new Date().getFullYear();
+
 
 export default function Home() {
   return (
@@ -45,9 +47,12 @@ export default function Home() {
               <Row>
                 <Col xs="12" className="text-center" style={{marginTop: '10px'}}>
                   <p className="text-white">&copy;{date} Greater Toronto Financial Holdings</p>
-                  <a className="text-white" href="https://www.fseconomy.net/atulumello" target="_blank" rel="noreferrer">Questions? Contact us on FSEconomy</a>
                 </Col>
-                
+              </Row>
+              <Row>
+              <Col xs="12" className="text-center text-white">
+                    <a className="text-white" href="https://discord.gg/86J8vrM" target="_blank" rel="noreferrer">Discord</a> | <a className="text-white" href="https://www.fseconomy.net/atulumello" target="_blank" rel="noreferrer">Contact Us</a>
+                  </Col>
               </Row>
             </div>
           </div>
