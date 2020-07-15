@@ -10,9 +10,22 @@ const siteData = {
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-sass`,
-              `gatsby-plugin-react-helmet`,
-            `gatsby-plugin-robots-txt`],
+  plugins: [
+            {
+              resolve: `gatsby-plugin-google-analytics`,
+              options: {
+                // The property ID; the tracking code won't be generated without it
+                trackingId: "UA-64053653-3",
+                // Defines where to place the tracking script - `true` in the head and `false` in the body
+                head: true,
+                // Setting this parameter is optional
+              },
+            },
+            `gatsby-plugin-sass`,
+            `gatsby-plugin-react-helmet`,
+            `gatsby-plugin-robots-txt`
+            
+          ],
   
   siteMetadata: {
     title: "Greater Toronto Financial",

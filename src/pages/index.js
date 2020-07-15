@@ -1,7 +1,7 @@
 import React from "react"
 
 //import FontAwesome from 'react-fontawesome'
-import {   Row , Col , Badge } from "reactstrap"
+import {   Row , Col , Badge , Alert } from "reactstrap"
 import Seo from '../components/seo'
 import Calculator from '../components/calculator'
 
@@ -30,12 +30,20 @@ export default function Home() {
             </div>
             <div id="calculator-wrapper" className="box-shadow">
               <Row>
-                <Col xs="12" className="text-center mb-1 mt-1">
+                <Col xs="12" className="text-center mt-1">
                    <h4 style={{textTransform: 'uppercase'}}>Calculate your loan</h4>
 
-                <Col className="mt-1">
-                  <Badge className="d-inline" color="primary" pill style={{padding: '4px 15px', fontWeight: '400', letterSpacing: '0.2px', fontSize: '13px'}}>v$2,876,511.00 Available</Badge>
-                </Col>   
+                  {/* <Col className="mt-1">
+                    <Badge className="d-inline" color="primary" pill style={{padding: '4px 15px', fontWeight: '400', letterSpacing: '0.2px', fontSize: '13px'}}>v$2,876,511.00 Available</Badge>
+                  </Col>    */}
+
+                  {/* <Col className="mt-1">
+                    <p>Note: All services will be unavailable July 30th - August 1st</p>
+                  </Col> */}
+
+                  <Alert className="mt-1" color="danger" style={{fontSize: '14px', padding: '5px 10px'}}>
+                    Note: All services will be unavailable July 30th - August 1st
+                  </Alert>
 
                 </Col>
               </Row>
