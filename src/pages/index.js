@@ -1,14 +1,14 @@
 import React from "react"
 
 //import FontAwesome from 'react-fontawesome'
-import {   Row , Col , Badge , Alert } from "reactstrap"
+import {   Row , Col  , Alert } from "reactstrap"
 import Seo from '../components/seo'
 import Calculator from '../components/calculator'
 
 import '../../node_modules/animate.css/animate.min.css'
 import '../scss/styles.scss'
 
-import Logo from '../../public/static/images/logo_web_icon_resize.png'
+import Logo from '../../static/logo_web_icon_resize.png'
 
 
 let date = new Date().getFullYear();
@@ -42,7 +42,7 @@ export default function Home() {
                   </Col> */}
 
                   <Alert className="mt-1" color="danger" style={{fontSize: '14px', padding: '5px 10px'}}>
-                    Note: All services will be unavailable July 30th - August 1st
+                    Note: All services will be unavailable August 5th - August 8th
                   </Alert>
 
                 </Col>
