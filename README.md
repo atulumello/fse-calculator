@@ -6,6 +6,9 @@ A simple gatsby/react powered FSEconomy loan calculator.
 
 Here it is - but may be a version behind: https://www.greatertorontofinancial.com
 
+## Usage
+Note that if you want to use firebase to retrieve balances with this project, you need to add your own firebase config within the firebase component.
+
 ### Plugins
 * reactstrap
 * Bootstrap

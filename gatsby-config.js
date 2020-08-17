@@ -8,14 +8,16 @@ const siteData = {
   url: "https://www.greatertorontofinancial.com"// No trailing slash allowed!
 }
 
+
 module.exports = {
   /* Your site config here */
+
   plugins: [
             {
               resolve: `gatsby-plugin-google-analytics`,
               options: {
                 // The property ID; the tracking code won't be generated without it
-                trackingId: "UA-64053653-3",
+                trackingId: "YOUR CODE",
                 // Defines where to place the tracking script - `true` in the head and `false` in the body
                 head: true,
                 // Setting this parameter is optional
@@ -37,3 +39,5 @@ module.exports = {
     image: "/images/icon.jpg", // Path to your image you placed in the 'static' folder
   },
 }
+
+

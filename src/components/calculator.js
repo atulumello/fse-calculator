@@ -23,21 +23,21 @@ export default function Calculator() {
 
     let newTerm
     let displayTerm
-    if ((term == 0 | isNaN)) {
+    if ((term === '0' | isNaN)) {
         displayTerm = ''
         newTerm = 0
     }
-    if ((term == 3)) {
+    if ((term === '3' )) {
         displayTerm = '(3%)'
         newTerm = 3
     }
-    if ((term == 4)) {
+    if ((term === '4')) {
         displayTerm = '(5%)'
         newTerm = 5
-    } if ((term == 5)) {
+    } if ((term === '5')) {
         displayTerm = '(7%)'
         newTerm = 7
-    } if ((term == 6)) {
+    } if ((term === '6')) {
         displayTerm = '(8%)'
         newTerm = 8
     }
@@ -48,11 +48,11 @@ export default function Calculator() {
     var totalOwnershipFees = ownershipFee * term
 
     var loan = price - downPayment
-    var loan = loan + totalOwnershipFees
+    var loanOwner = loan + totalOwnershipFees
     
 
-    var interestCharge = loan * (newTerm/100)
-    var totalLoan = loan + interestCharge
+    var interestCharge = loanOwner * (newTerm/100)
+    var totalLoan = loanOwner + interestCharge
 
     if (isNaN(totalLoan)) totalLoan = 0
     if (isNaN(interestCharge)) interestCharge = 0
