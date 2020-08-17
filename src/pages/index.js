@@ -1,14 +1,15 @@
 import React from "react"
 
 //import FontAwesome from 'react-fontawesome'
-import {   Row , Col  , Alert } from "reactstrap"
+import {   Row , Col } from "reactstrap"
 import Seo from '../components/seo'
 import Calculator from '../components/calculator'
+import Balance from '../components/balance'
 
 import '../../node_modules/animate.css/animate.min.css'
 import '../scss/styles.scss'
 
-import Logo from '../../static/logo_web_icon_resize.png'
+import Logo from './../../static/logo_web_icon_resize.png'
 
 
 let date = new Date().getFullYear();
@@ -33,17 +34,7 @@ export default function Home() {
                 <Col xs="12" className="text-center mt-1">
                    <h4 style={{textTransform: 'uppercase'}}>Calculate your loan</h4>
 
-                  {/* <Col className="mt-1">
-                    <Badge className="d-inline" color="primary" pill style={{padding: '4px 15px', fontWeight: '400', letterSpacing: '0.2px', fontSize: '13px'}}>v$2,876,511.00 Available</Badge>
-                  </Col>    */}
-
-                  {/* <Col className="mt-1">
-                    <p>Note: All services will be unavailable July 30th - August 1st</p>
-                  </Col> */}
-
-                  <Alert className="mt-1" color="danger" style={{fontSize: '14px', padding: '5px 10px'}}>
-                    Note: All services will be unavailable September 5th - September 8th
-                  </Alert>
+                   <Balance />
 
                 </Col>
               </Row>
