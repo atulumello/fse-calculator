@@ -42,7 +42,7 @@ export default function Home() {
                   </Col> */}
 
                   <Alert className="mt-1" color="danger" style={{fontSize: '14px', padding: '5px 10px'}}>
-                    Note: All services will be unavailable August 5th - August 8th
+                    Note: All services will be unavailable September 5th - September 8th
                   </Alert>
 
                 </Col>
