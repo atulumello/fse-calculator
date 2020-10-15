@@ -5,6 +5,7 @@ import {   Row , Col } from "reactstrap"
 import Seo from '../components/seo'
 import Calculator from '../components/calculator'
 import Balance from '../components/balance'
+import TosModal from '../components/tos-modal'
 
 import '../../node_modules/animate.css/animate.min.css'
 import '../scss/styles.scss'
@@ -44,15 +45,13 @@ export default function Home() {
             </div>
             <div id="foot-wrapper">
               <Row>
-                <Col xs="12" className="text-center" style={{marginTop: '10px'}}>
+                <Col xs="12" className="text-center" style={{marginTop: '10px', fontSize: '14px'}}>
                   <p className="text-white">&copy;{date} Greater Toronto Financial Holdings</p>
                 </Col>
               </Row>
-              <Row>
-              <Col xs="12" className="text-center text-white">
-                    <a className="text-white" href="https://discord.gg/86J8vrM" target="_blank" rel="noreferrer">Discord</a> | <a className="text-white" href="https://www.fseconomy.net/atulumello" target="_blank" rel="noreferrer">Contact Us</a>
-                  </Col>
-              </Row>
+              <TosModal />
+
+              
             </div>
           </div>
         </div>
