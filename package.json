@@ -19,7 +19,7 @@
     "animate.css": "^4.1.0",
     "bootstrap": "^4.5.2",
     "firebase": "^7.17.2",
-    "gatsby": "^2.24.47",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-google-analytics": "^2.3.13",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-robots-txt": "^1.5.1",
